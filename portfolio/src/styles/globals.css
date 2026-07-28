@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@import "./variables.css";
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
