@@ -1,24 +1,24 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
+import Hero from "./components/Hero/Hero";
 
-// Placeholder imports - create these files in src/pages/
-const Home = () => <div className="p-8 text-2xl font-bold">Home Page Draft</div>;
-const Projects = () => <div className="p-8">Projects Page</div>;
-const Hackathons = () => <div className="p-8">Hackathons Page</div>;
-const Gallery = () => <div className="p-8">Photography Gallery</div>;
+// Placeholders for the other pages
+const Projects = () => <div className="p-32 text-center text-2xl font-bold">Projects Page</div>;
+const Hackathons = () => <div className="p-32 text-center text-2xl font-bold">Hackathons Page</div>;
+const Gallery = () => <div className="p-32 text-center text-2xl font-bold">Gallery Page</div>;
 
 function App() {
   return (
     <BrowserRouter>
-      {/* <Navbar /> will go here so it persists across routes */}
-      <main className="min-h-screen">
+      <Navbar />
+      <main className="min-h-screen pt-20"> {/* pt-20 prevents content hiding behind fixed navbar */}
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Hero />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/hackathons" element={<Hackathons />} />
           <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </main>
-      {/* <Footer /> will go here */}
     </BrowserRouter>
   );
 }
